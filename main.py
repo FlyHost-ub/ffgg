@@ -174,7 +174,7 @@ async def send_welcome(message):
                 c = 1
     if c == 1:
 
-       await bot.send_message(message.from_user.id, text = '*Привет это 🍿КИНОМОЛОКО - БОТ | Поиск🔍\nЧтобы узнать название фильмов из ЮТУБ | ТИК ТОК вам нужно ввести код фильма.\nНажмите на «🔎Поиск» 👇*',parse_mode = 'Markdown',reply_markup = start.greet_kb1)
+       await bot.send_message(message.from_user.id, text = '*лил скамя лох*',parse_mode = 'Markdown',reply_markup = start.greet_kb1)
 
 
 @dp.callback_query_handler(text = 'stat')
@@ -267,7 +267,7 @@ async def vote_up_cb_handler(call):
 async def vote_up_cb_handler(call):
     user = await reg(a = str(call.from_user.id), b = str(call.from_user.username))
     
-    user['quest'] = 1
+    user['quest'] = {}
 
     with codecs.open(str(user_cd) + str(call.from_user.id) +".txt", 'w' ,encoding="UTF-8") as file:
         file.write(str(user))
